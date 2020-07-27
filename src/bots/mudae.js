@@ -13,10 +13,11 @@ module.exports = (Connection, message, List, Notify) => {
             senderName.match(/Mudae|Muda(maid|butler)\s?\d*/)
     ) {
 
-        const waifu = embed.author.name
+        const waifu = embed.author.name.split(' <')[0]
         if (!List.includes(waifu)) return // Unwanted waifus
-            
-        const Matches = {
+        
+        /* Detect either character or kakera and react message if asked to */
+        const Categories = {
             'waifu': async(reaction, activate) => {
                 if (reactions.waifu.emojis.includes(reaction.emoji.name)) {
                     activate && await message.react(reaction.emoji.name)
@@ -37,8 +38,8 @@ module.exports = (Connection, message, List, Notify) => {
         const CheckType = reaction => {
             let val
         
-            Object.keys(Matches).some(key => {
-                if (Matches[key](reaction) && !val) {
+            Object.keys(Categories).some(key => {
+                if (Categories[key](reaction) && !val) {
                     val = key
                     return 1
                 }
@@ -62,7 +63,7 @@ module.exports = (Connection, message, List, Notify) => {
 
                 const key = CheckType(reaction)
                 const data = reactions[key].data
-                Matches[key](reaction, 1)
+                Categories[key](reaction, 1)
 
                 /* Wait Response */
                 filter = response => 
@@ -90,9 +91,9 @@ module.exports = (Connection, message, List, Notify) => {
                 const CollectWaifu = miss => {
                     const image = embed.image.proxyURL
                     const anime = embed.description.split('\n')[0]
-                    const claims = embed.description.match(/Claims:\s#(\d*)/)
-                    const likes = embed.description.match(/Likes:\s#(\d*)/)
-                    const kakera = embed.description.match(/\*\*(\d*)\*\*<:kakera:469835869059153940>/)
+                    const claims = embed.description.match(/Claims:\s#(\d+)/)
+                    const likes = embed.description.match(/Likes:\s#(\d+)/)
+                    const kakera = embed.description.match(/\*\*(\d*)\*\*<:kakera:\d+>/)
 
                     /* User Logs */
                     const parentLog = `div.userLogs.${localUser.id}`

@@ -79,7 +79,6 @@ async function ConnectToDiscord(token) {
             rs.css('color', '#b71c1c')
             tryingConnection = 0
             LoadAccounts()
-            FocusAccount(id)
         })
 
 }
@@ -175,9 +174,10 @@ function FocusAccount(id, data) {
 
         $(logs).attr('id', '')
 
-        document.title = `${data.info.username}#${data.info.tag} - Weebcord`
-
-        if (data) LoadUserData(data)
+        if (data) { 
+            document.title = `${data.info.username}#${data.info.tag} - Weebcord`
+            LoadUserData(data)
+        }
     }
 }
 

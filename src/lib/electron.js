@@ -24,7 +24,7 @@ function startApp() {
         slashes: true
     }))
 
-   //window.removeMenu()
+    // window.removeMenu()
 }
 
 app.on('ready', startApp)

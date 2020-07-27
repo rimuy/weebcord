@@ -29,10 +29,7 @@ const ExtendedPath = {
         DataStructure.forEach(f => {
             const p = Path.join(appPath, f)
             if (!existsSync(p)) mkdirSync(p)
-            console.log('verify')
         })
-
-        console.log('end')
 
         return appPath
     }

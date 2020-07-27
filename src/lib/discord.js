@@ -29,13 +29,21 @@ class ClientUser {
 
     Client = new Client()
 
+    isReady = () => false
+
     waitUntilReady = () => new Promise((res, rej) => {
         const timeOut = setTimeout(() => rej('Time expired.'), 30000)
 
-        this.Client.on('ready', async() => {
-            clearTimeout(timeOut)
-            res('Ready!')
-        })
+        const check = () => {
+            if (this.isReady()) {
+                clearTimeout(timeOut)
+                res('Ready!')
+            } else { 
+                setTimeout(check, 1000)
+            }
+        }
+        
+        check()
     })
 
     update = () => {
@@ -82,4 +90,7 @@ class ClientUser {
 
 }
 
-module.exports = { ClientUser, connections }
+module.exports = { 
+    ClientUser, 
+    connections, 
+}

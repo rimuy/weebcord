@@ -1,5 +1,8 @@
 
 module.exports = {
     "name": "ready",
-    "run": () => console.log('Ready')
+    "run": Connection => {
+        Connection.isReady = () => true
+        console.log('Ready.')
+    }
 }
