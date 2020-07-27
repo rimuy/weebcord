@@ -1,0 +1,114 @@
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html">
+        <meta charset="utf-8">
+        <meta name="author" content="Kevinwkz">
+        <title>Weebcord</title>
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+        <link rel="stylesheet" type="text/css" href="css/pannel.css">
+        <link rel="stylesheet" type="text/css" href="css/tab.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    </head>
+    <body>
+        <header>
+            <div class="top" id="noselect">Weebcord</div>
+            <div class="option" id="minimize">▁</div>
+            <div class="option" id="maximize">☐</div>
+            <div class="option" id="close">✕</div>
+        </header>
+        
+        <div class="l-tab" id="noselect">
+            <div class="l-tabTitle">ACCOUNTS</div>
+            <div id="accounts"></div>
+            <!-- WIP
+            <div class="l-tabTitle">GENERAL LOGS</div>
+            <div class="logs"></div>
+            -->
+        </div>
+
+        <div class="register" id="hidden">
+            <div style="display: flex;">
+                <input type="text" spellcheck="false" placeholder=" Token" class="registerBox">
+                <p class="registerButton" id="noselect">Connect</p>
+            </div>
+            <div style="display: flex;">
+                <p class="registerStatus" id="hidden"></p>
+            </div>
+        </div>
+
+        <div class="pannel" id="hidden">
+            <div class="account">
+                <table class="tabs" id="noselect">
+                    <td class="tab" id="selected">Menu</td>
+                    <td class="tab">Settings</td>
+                </table>
+
+                <div class="pannelTab" wm-menu>
+                    <div class="user">
+                        <img class="userImage" src='../assets/images/usertemplate.png' id="noselect">
+                        <div class="userInfo">
+                            <p id="noselect">Username</p><p class="username">Username<label>#0000</label></p>
+                            <p id="noselect">ID</p><p class="userid">ID</p>
+                            <p id="noselect">Last Login</p><p class="lastLogin">Timestamp</p>
+                        </div>
+                    </div>
+
+                    <div class="userLogs" id="hidden">
+
+                        <div class="userLog" id="hidden">
+                            <img class="userLogWaifuImage" id="noselect">
+                            <div class="userLogInfo">
+                                <div style="display: flex;">
+                                    <p class="waifuName" id="noselect">Name</p>
+                                    <p class="waifuTimestamp" id="noselect">Just now</p>
+                                </div>
+                                <div class="waifuInfo" id="noselect">
+                                    <!-- <img src="../assets/images/female.png">&nbsp;<p class="gender">Female</p> -->
+                                    <p class="anime">?</p>
+                                    <img src="../assets/images/kakera.png">&nbsp;<strong class ="kakera">?</strong>
+                                    <img src="../assets/images/claims.png">&nbsp;<strong class="claims">?</strong>
+                                    <img src="../assets/images/likes.png">&nbsp;<strong class="likes">?</strong>
+                                </div>
+                                <p class="waifuCollection" id="noselect">Waifu Status</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="pannelTab" wm-settings id="hidden">
+                    <div id="noselect">
+                        <input type="checkbox" id="notifications" checked="yes">
+                        <label for="notifications" id="noselect" >Desktop Notifications</label>
+                        <!-- WIP
+                        <br><br>
+                        <input type="checkbox" id="generalLogs" checked="yes">
+                        <label for="generalLogs" id="noselect">General Logs</label>
+                        -->
+                    </div>
+                    <div>
+
+                        <select class="listSelect">
+                            <option value="default">Default (Top 500)</option>
+                        </select>
+
+                        <form action="">
+                            <div class="dropzone">
+                                <span class="drop-zone__prompt" id="noselect">Drop list here or click to upload</span>
+                                <input type="file" name="fileUploader" class="dropzone__input" accept="text/plain" multiple>
+                            </div>
+                        </form>
+
+                        <div class="waifuLists" id="noselect">
+                            <p id="title">Waifu List <i class="material-icons" id="deleteList">delete</i></p>
+                            <div class="listsScroll"></div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="./index.js"></script>
+    </body>
+</html>

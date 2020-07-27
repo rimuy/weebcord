@@ -1,0 +1,17 @@
+# Basic
+.DS_Store
+node_modules
+package-lock.json
+*.sh
+*.bat
+releases
+test
+dev
+
+docs/*
+!docs/default*
+
+# Log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*

@@ -1,0 +1,40 @@
+{
+    "timeout": 5000,
+    "logsLimit": 7,
+    "reactions": {
+        "waifu": {
+            "emojis": ["♥️", "❤️", "💕", "💞","❣️", "💓", "💗", "💖", "💘", "💝", "💟"],
+            "data": {
+                "collected": {
+                    "text": "Waifu Collected!",
+                    "dom": "waifuCollected"
+
+                },
+                "missed": {
+                    "text": "Missed!",
+                    "dom": "waifuMissed"
+                },
+                "notification": "{waifu} has been added to your collection!"
+            }
+        },
+        "kakera": {
+            "emojis": [
+                "<:kakera:469835869059153940>", "<:kakeraG:609264166381027329>", 
+                "<:kakeraT:609264180851376132>", "<:kakeraP:609264156347990016>",
+                "<:kakeraO:605112954391887888>", "<:kakeraY:605112931168026629>"
+            ],
+            "data": {
+                "collected": {
+                    "text": "Kakera Collected!",
+                    "dom": "kakeraCollected"
+
+                },
+                "missed": {
+                    "text": "Kakera Missed!",
+                    "dom": "kakeraMissed"
+                },
+                "notification": "+{kakera} has been collected from {waifu}!"
+            }
+        } 
+    }
+}

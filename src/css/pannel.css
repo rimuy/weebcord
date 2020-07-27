@@ -1,0 +1,221 @@
+
+.pannel {
+    background-color: #0f161f;
+    border-radius: 10px;
+    /*box-shadow: 8px 8px 20px 8px #060606;*/
+    width: 70%;
+    height: 80%;
+    color: #FEFEFE;
+    display: table;
+    margin: 5% auto;
+}
+
+[wm-menu] {
+    display: inline-flexbox;
+}
+
+[wm-settings] {
+    display: flex;
+}
+
+.tabs {
+    width: 100%;
+    height: 50px;
+    background-color: #152232;
+    border-radius: 10px 10px 0 0;
+}
+
+.tab {
+    background-color: #152232;
+    width: 33%;
+    font-size: 16px;
+    font-family: uniSansThin, sans-serif;
+    text-align: center;
+    color: #99AAB5;
+}
+
+.account .tabs {
+    cursor: pointer;
+}
+
+.account .tabs td:nth-child(1) {
+    border-radius: 10px 0 0 0;
+}
+
+.account .tabs td:nth-last-child(1) {
+    border-radius: 0 10px 0 0;
+}
+
+#deleteAccount:hover {
+    color: #f44336;
+}
+
+[wm-menu] > div { 
+    background-color: #0f161f; 
+    width: auto;
+    margin: 30px;
+    border-radius: 10px;
+    border: 2px solid #091014;
+}
+
+[wm-settings] > div {
+    width: 50%;
+    height: 300px;
+    padding: 25px;
+}
+
+.user {
+    height: 33vh;
+    display: flex;
+}
+
+.userLogs {
+    height: 33vh
+}
+
+.userImage {
+    background-size: cover;
+    display: block;
+    width: 150px;
+    height: 150px;
+    margin: 20px 10px 0 30px;
+    border: 6px solid #747f8d;
+    border-radius: 50% 10%;
+}
+
+.userInfo { padding: 20px; }
+
+.userInfo p { 
+    padding: 5px; 
+    color: #7289DA;
+}
+
+.userInfo p label { color: #5b646b; }
+
+.userInfo #noselect {
+    color: #FEFEFE;
+    border-radius: 5px;
+}
+
+.userinfo #noselect:nth-child(1) { background: #ef5350; }
+.userinfo #noselect:nth-child(3) { background: #FFD180; }
+.userinfo #noselect:nth-child(5) { background: #66BB6A; }
+
+.userLogs {
+    display: block;
+    padding: 10px;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+
+}
+
+.userLog {
+    display: flex;
+    margin: 7px 0;
+}
+
+.userLogInfo {
+    display: inline-block;
+    padding: 5px 20px;
+}
+
+.userLogWaifuImage {
+    background-size: cover;
+    background-color: #314359;
+    width: 67px;
+    height: 105px;
+    border: 0;
+    border: 4px solid #0f161f;
+}
+
+.waifuName { 
+    border-radius: 6px;
+    background-color: #2196F3;
+    color: #FEFEFE; 
+    padding: 5px;
+}
+
+.waifuInfo { display: flex; margin: 5px; }
+.waifuInfo p, .waifuInfo strong { padding: 0 10px 0 0; }
+
+.waifuInfo img {
+    height: 16px;
+}
+
+.waifuCollection {
+    color: #FFFFFF;
+    margin: 15px 0;
+    padding: 2px 6px;
+    border-radius: 20px;
+    width: 200px;
+    text-align: center;
+}
+
+.waifuTimestamp {
+    margin-left: 10px; 
+    padding: 4px;
+    color: #5b646b;
+}
+
+.waifuCollected { 
+    background-color: #EC407A;
+}
+
+.waifuMissed { 
+    background-color: #d50000;
+}
+
+.kakeraCollected { 
+    background-color: #7E57C2;
+}
+
+.kakeraMissed { 
+    background-color: #ef9904;
+}
+
+.waifuLists {
+    height: 275px;
+}
+
+.waifuLists > #title {
+    color: #99AAB5;
+    background-color: #091014;
+    padding: 6px;
+    text-align: center;
+    justify-content: center;
+    font-weight: 500;
+    font-size: 22px;
+    display: flex;
+}
+
+.waifuLists > #title i {
+    position: absolute;
+    margin-left: 12%;
+    cursor: pointer;
+}
+
+.waifuLists > #title i:hover {
+    color: #f44336;
+}
+
+.listsScroll {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    height: 100%;
+}
+
+.listsScroll > p {
+    text-align: center;
+    padding: 10px;
+    background-color: #131d28;
+}
+
+.listsScroll > p:nth-child(even) {
+    background-color: #192433;
+}
+
+.deleteList {
+    background-color: ivory;
+    width: 10px;
+    height: 10px;
+}

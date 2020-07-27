@@ -1,0 +1,124 @@
+
+.l-tab {
+    background-color: #152232;
+    width: 14em;
+    height: 100%;
+    float: left;
+}
+
+.l-tabTitle {
+    background-color: #0f161f;
+    color: #99AAB5;
+    padding: 5px;
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: initial;
+    font-weight: 600;
+    display: flex;
+}
+
+.l-tabElement {
+    color: #99AAB5;
+    padding: 7px 30px;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+}
+
+#registerSelected {
+    background-color: #04b0f9;
+    color: #FEFEFE;
+}
+
+.l-tabElement:hover, .tab:hover {
+    background-color: #314359;
+    color: #FEFEFE;
+}
+
+.l-tabCreate {
+    padding: 7px 15px;
+    font-weight: 600;
+    background-color: #0f161f;
+    color: #56626b;
+}
+
+.l-tabCreate:hover {
+    color: #04b0f9;
+}
+
+/*
+.logs {
+    overflow-y: scroll;
+    display: block;
+    scroll-behavior: smooth;
+}
+
+.log {
+    background-color: #314359;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.collected {
+    background-color: #55FF5520;
+}
+
+.missed {
+    background-color: #FF555520;
+}
+
+.log p {
+    font-size: 14px;
+}
+
+.collected > p {
+    color: #009f00;
+}
+
+.missed > p {
+    color: #9f2000;
+}
+*/
+
+.register {
+    margin: 10px 15em;
+    width: auto;
+    height: auto;
+    position: fixed;
+    padding: 10px;
+    background-color: #091014;
+    border: 3px solid #0f161f;
+    border-radius: 6px;
+}
+
+.registerBox {
+    width: 100px;
+    height: 30px;
+}
+
+.registerButton {
+    background-color: #00bc38;
+    color: #FEFEFE;
+    border-radius: 6px;
+    padding: 6px;
+    margin-left: 10px;
+    height: 16px;
+    cursor: pointer;
+}
+
+.registerButton:hover {
+    background-color: #03a032;
+}
+
+.registerStatus {
+    padding: 10px;
+    font-style: italic;
+}
+
+.loadingIcon {
+    background-image: url(../../assets/loading.gif);
+    background-size: cover;
+    height: 30px;
+    width: 30px;
+    border-image: none;
+}

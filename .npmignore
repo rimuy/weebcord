@@ -1,0 +1,13 @@
+.DS_Store
+CONTRIBUTING.md
+releases
+docs/*
+!docs/default
+logs/*
+src/db/*
+.git
+*.tar.gz
+*.sh
+*.bat
+dev
+test

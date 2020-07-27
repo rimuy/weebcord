@@ -1,0 +1,34 @@
+{
+  "name": "weebcord",
+  "version": "0.1.0",
+  "description": "",
+  "main": "src/lib/electron.js",
+  "scripts": {
+    "start": "electron .",
+    "build-win32": "electron-packager . --all --overwrite --asar --platform=win32 --arch=ia32 --icon=assets/icons/icon.ico --prune=true --out=releases --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"weebcord\"",
+    "build-linux": "electron-packager . --all --overwrite --asar --platform=linux --arch=x64 --icon=assets/icons/icon.png --prune=true --out=releases",
+    "build-mac": "electron-packager . --all --overwrite --platform=darwin --arch=x64 --icon=assets/icons/icon.icns --prune=true --out=releases"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Kevinwkz/weebcord.git"
+  },
+  "keywords": [
+    "discord",
+    "discord-js",
+    "mudae",
+    "waifu"
+  ],
+  "author": "Kevinwkz",
+  "license": "MIT",
+  "dependencies": {
+    "discord.js-plus": "^12.2.11",
+    "fs": "^0.0.1-security",
+    "moment": "^2.27.0",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "electron": "^9.1.0",
+    "electron-packager": "^15.0.0"
+  }
+}
