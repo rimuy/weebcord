@@ -1,7 +1,8 @@
 {
   "name": "weebcord",
-  "version": "0.1.0",
-  "description": "",
+  "version": "1.0.9",
+  "private": true,
+  "description": "Automatic waifu collector for discord waifubots",
   "main": "src/lib/electron.js",
   "scripts": {
     "start": "electron .",
@@ -12,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Kevinwkz/weebcord.git"
+    "url": "git+https://github.com/Kevinwkz/weebcord.git"
   },
   "keywords": [
     "discord",
@@ -24,12 +25,10 @@
   "license": "MIT",
   "dependencies": {
     "discord.js-plus": "^12.2.11",
-    "fs": "^0.0.1-security",
-    "moment": "^2.27.0",
-    "path": "^0.12.7"
+    "moment": "^2.27.0"
   },
   "devDependencies": {
-    "electron": "^9.1.0",
+    "electron": "^10.1.5",
     "electron-packager": "^15.0.0"
   }
 }

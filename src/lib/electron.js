@@ -11,7 +11,7 @@ function startApp() {
         frame: false,
         show: false,
         webPreferences: {
-            nodeIntegration: true
+            nodeIntegration: true,
         },
         icon: `${__dirname}/../../assets/icons/icon.ico`
     })
