@@ -1,5 +1,6 @@
 const { remote } = require('electron')
 const Settings = require('./settings')
+const path = require('path')
 
 module.exports = (title, message) => {
     const window = remote.getCurrentWindow()
@@ -8,7 +9,7 @@ module.exports = (title, message) => {
 
     new Notification(title, {
         body: message,
-        icon: '../assets/icons/linux.png'
+        icon: path.join(__dirname, '..', '..', 'assets', 'icons', 'icon.png')
     })
     .onclick = () => window.focus()
 }
