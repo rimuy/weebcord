@@ -1,5 +1,6 @@
 const { app, BrowserWindow } = require('electron')
 const url = require('url')
+const path = require('path')
 
 let window
 
@@ -12,15 +13,17 @@ function startApp() {
         show: false,
         webPreferences: {
             nodeIntegration: true,
+            enableRemoteModule: true,
         },
-        icon: `${__dirname}/../../assets/icons/icon.ico`
+        icon: path.join(__dirname, '..', '..', 'assets', 'icons', 'icon.ico')
     })
 
     window.once('ready-to-show', () => window.show())
     window.on('closed', () => window = null)
 
     window.loadURL(url.format({
-        pathname: `${__dirname}/../index.html`,
+        pathname: path.join(__dirname, '..', 'index.html'),
+        protocol: 'file:',
         slashes: true
     }))
 
