@@ -25,7 +25,17 @@ Once you register an account, you get access to a settings menu
 
 ![settings](assets/markdown/firstSettings.png)
 
-You start with a default list for waifu collection, but you can upload custom ones
+You start with a default list for waifu collection, but you can upload custom ones.
+
+### List Format Example
+> waifulist.txt
+```
+Megumin
+Sophia Ascart
+Ononoki Yotsugi
+Hikigaya Komachi
+...
+```
 
 Contribute
 ----------
