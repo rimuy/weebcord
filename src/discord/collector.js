@@ -1,7 +1,9 @@
 const fs = require('fs')
 const moment = require('moment')
 const Notify = require('../lib/notifications')
+const Settings = require('../lib/settings')
 const Path = require('path')
+
 const $ = require('../lib/jquery')
 
 const listsPath = Path.join(__dirname, '..', '..', 'docs/')
@@ -10,7 +12,7 @@ module.exports = {
     "name": "message",
     "run": (Connection, message) => {
 
-        const { bot, selectedList, notifications } = require('../db/settings.json')
+        const { bot, selectedList, notifications } = Settings.get()
         const modulePath = Path.join(__dirname, '../', 'bots', bot + '.js')
 
         if (fs.existsSync(modulePath)) {

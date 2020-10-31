@@ -16,7 +16,7 @@ const write = () =>
     fs.writeFileSync(settingsPath, JSON.stringify(settings, null, 4))
 
 module.exports = {
-    get: key => settings[key],
+    get: key => key ? settings[key] : settings,
     set: (key, value) => {
         if (typeof settings[key] === typeof value) {
             settings[key] = value
