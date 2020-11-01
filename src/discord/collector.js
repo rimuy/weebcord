@@ -26,7 +26,7 @@ module.exports = {
             /* General Logs */
             const now = moment().format('YYYY-MM-DD HH:mm:ss')
             fs.appendFileSync(
-                `${__dirname}/../../logs/${process.getCreationTime()}.log`, 
+                Path.join(__dirname, '..', '..', 'logs', `${process.getCreationTime()}.log`), 
                 `[${now}] [${$.fn.capitalize(bot)}] ${message.content}\n`
             )
             
