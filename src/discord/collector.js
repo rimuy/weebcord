@@ -2,11 +2,9 @@ const fs = require('fs')
 const moment = require('moment')
 const Notify = require('../lib/notifications')
 const Settings = require('../lib/settings')
-const Path = require('path')
+const Path = require('../lib/path')
 
-const $ = require('../lib/jquery')
-
-const listsPath = Path.join(__dirname, '..', '..', 'docs/')
+const listsPath = Path.join(Path.OSLocalPath(), 'lists/')
 
 module.exports = {
     "name": "message",
