@@ -20,14 +20,6 @@ module.exports = {
                 fs.readFileSync(listsPath + selectedList, { encoding: 'utf8', flag: 'r' }).split('\n'),
                 (() => { if (notifications) return Notify })()
             )
-
-            /* General Logs 
-            const now = moment().format('YYYY-MM-DD HH:mm:ss')
-            fs.appendFileSync(
-                Path.join(__dirname, '..', '..', 'logs', `${process.getCreationTime()}.log`), 
-                `[${now}] [${$.fn.capitalize(bot)}] ${message.content}\n`
-            )
-            */
             
         }
 
