@@ -10,11 +10,11 @@ module.exports = (Connection, message, List, Notify) => {
     const embed = message.embeds[0]
 
     if ( sender.bot && embed && embed.type === 'rich' &&
-            senderName.match(/Mudae|Muda(maid|butler)\s?\d*/)
+        senderName.match(/Mudae|Muda(maid|butler)\s?\d*/)
     ) {
 
         const waifu = embed.author.name.split(' <')[0]
-        if (!List.includes(waifu)) return // Unwanted waifus
+        if (!(List.some(e => e.trim().toLowerCase() === waifu.trim().toLowerCase()))) return // Unwanted waifus
         
         /* Detect either character or kakera and react message if asked to */
         const Categories = {
