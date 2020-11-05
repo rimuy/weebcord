@@ -1,5 +1,5 @@
 
 module.exports = {
-    "name": "userUpdate",
-    "run": Connection => Connection.update()
-}
+    'name': 'userUpdate',
+    'run': Connection => Connection.update()
+};

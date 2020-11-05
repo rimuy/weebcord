@@ -28,7 +28,10 @@
     "moment": "^2.27.0"
   },
   "devDependencies": {
+    "babel-eslint": "^10.1.0",
     "electron": "^10.1.5",
-    "electron-packager": "^15.0.0"
+    "electron-packager": "^15.0.0",
+    "eslint": "^7.12.1",
+    "eslint-plugin-babel": "^5.3.1"
   }
 }
