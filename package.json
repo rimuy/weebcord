@@ -29,7 +29,7 @@
   },
   "devDependencies": {
     "babel-eslint": "^10.1.0",
-    "electron": "^10.2.0",
+    "electron": "^11.5.0",
     "electron-packager": "^15.0.0",
     "eslint": "^7.12.1",
     "eslint-plugin-babel": "^5.3.1"
